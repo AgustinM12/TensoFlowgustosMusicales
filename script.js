@@ -43,16 +43,35 @@ function generateOptions() {
 }
 
 artists.innerHTML = artistList.map(artist =>
-    `<li>${artist}</li>
+    `<li class="mx-auto">${artist}
     <select>
     ${generateOptions()}   
     </select>
+    </li>
 `).join('');
 
+
 calcularBtn.addEventListener("click", () => {
-    const values = document.querySelectorAll("select");
+    const values = [];
+    let allValuesValid = true; // Variable para verificar si todos los valores son válidos
+    const selects = document.querySelectorAll("select");
 
-    console.log(values.value);
+    selects.forEach(select => {
+        const value = parseFloat(select.value);
+        if (isNaN(value)) { // Verifica si el valor no es un número
+            allValuesValid = false;
+            return; // Sale del bucle forEach si encuentra un valor inválido
+        }
+        values.push(value);
+    });
 
-})
+    if (!allValuesValid) {
+        alert("Por favor, selecciona un número en todos los selects.");
+        return; // Detiene la ejecución si hay algún valor inválido
+    }
+
+    console.log(values);
+});
+
+
 
