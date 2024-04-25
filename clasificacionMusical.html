@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Gustos musicales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tensorFlowCDN.js"></script>
+</head>
+
+<body>
+    <main class="bg-slate-300 min-h-screen">
+        <h1 id="welcome"></h1>
+
+        <section class="bg-slate-400">
+            <ul id="artists" class="grid grid-cols-3 gap-3"></ul>
+        </section>
+
+        <section>
+            <button id="calcularBtn" class="p-1 bg-red-500 rounded-md font-bold hover:bg-red-800 text-white transition-colors">¡Calcular!</button>
+
+            <h2 id="generoRecomendado"></h2>
+            <ul id="otros"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
