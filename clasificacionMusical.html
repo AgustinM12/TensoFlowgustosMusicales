@@ -10,18 +10,19 @@
 </head>
 
 <body>
-    <main class="bg-slate-300 min-h-screen">
+    <main class="bg-slate-300 min-h-screen max-w-screen">
+
         <h1 id="welcome"></h1>
 
-        <section class="bg-slate-400">
-                <ul id="artists" class="grid grid-cols-3 gap-3 justify-start"></ul>
+        <section class="bg-slate-400 pb-3">
+            <ul id="artists" class="grid grid-cols-3 gap-3 justify-start mx-auto"></ul>
         </section>
 
-        <section>
-            <button id="calcularBtn" class="p-1 bg-red-500 rounded-md font-bold hover:bg-red-800 text-white transition-colors">¡Calcular!</button>
+        <section class="p-10 grid justify-center items-center bg-slate-400 border-t-2">
+            <button id="calcularBtn"
+                class="p-1 bg-red-500 rounded-md font-bold hover:bg-red-800 text-white transition-colors">¡Calcular!</button>
 
-            <h2 id="generoRecomendado"></h2>
-            <ul id="otros"></ul>
+            <ul id="generoRecomendado"></ul>
         </section>
     </main>
     <script src="script.js"></script>
